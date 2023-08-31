@@ -19,7 +19,7 @@ const SplashScreen = ({ navigation }) => {
   useEffect(() => {
     startAnimation();
     const navigationTimeout = setTimeout(() => {
-      navigation.navigate("HomeScreen");
+      navigation.navigate("Tab");
     }, 3000);
     return () => clearTimeout(navigationTimeout);
   }, []);
