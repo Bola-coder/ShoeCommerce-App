@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import SplashScreen from "../screens/SplashScreen/SplashScreen";
 import TabNavigation from "./TabNavigation";
+import BrandScreen from "../screens/BrandScreen/BrandScreen";
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -16,6 +17,11 @@ const StackNavigator = () => {
       <Stack.Screen
         name="Tab"
         component={TabNavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BrandScreen"
+        component={BrandScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

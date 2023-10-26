@@ -29,13 +29,15 @@ const styles = StyleSheet.create({
 
   btn: {
     padding: 10,
-    backgroundColor: "#2F2828",
+    // backgroundColor: "#2F2828",
     borderRadius: 30,
-    opacity: 0.9,
+    // opacity: 0.9,
   },
 
   btnText: {
-    color: "#fff",
+    // color: "#fff",
     fontSize: 16,
+    color: "#2F2828",
+    fontFamily: "Monterrat-Black",
   },
 });

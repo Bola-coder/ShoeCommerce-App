@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   home: {
-    flexGrow: 1,
+    // flexGrow: 1,
     padding: 10,
     backgroundColor: "#FFF",
   },

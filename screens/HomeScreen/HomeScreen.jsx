@@ -3,11 +3,11 @@ import React from "react";
 import CategoryCard from "../../components/CategoryCard";
 import styles from "./style";
 import SectionTitle from "../../components/SectionTitle";
-import Brands from "../../components/Brands";
+import Tab from "../../components/Tab";
 import ShoeCard from "../../components/ShoeCard";
 import VerticalShoeCard from "../../components/VerticalShoeCard";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const categories = [
     {
       id: 1,
@@ -69,12 +69,15 @@ const HomeScreen = () => {
       <View style={styles.brands}>
         <SectionTitle name={"Select a Brand"} />
         <View style={styles.brandContent}>
-          <Brands name="adidas" />
-          <Brands name="PUMA" />
-          <Brands name="NIKE" />
-          <Brands name="crocs" />
-          <Brands name="SKETCHERS" />
-          <Brands name="Reebok" />
+          <Tab
+            name="adidas"
+            onPress={() => navigation.navigate("BrandScreen")}
+          />
+          <Tab name="PUMA" />
+          <Tab name="NIKE" />
+          <Tab name="crocs" />
+          <Tab name="SKETCHERS" />
+          <Tab name="Reebok" />
         </View>
       </View>
 

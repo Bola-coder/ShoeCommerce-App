@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingVertical: 20,
     backgroundColor: "#5c9cd4",
+    backgroundColor: "#2F2828",
     marginVertical: 10,
     borderRadius: 10,
   },
@@ -29,5 +30,7 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 18,
     fontWeight: "500",
+    color: "#fff",
+    fontFamily: "Monterrat-Bold",
   },
 });

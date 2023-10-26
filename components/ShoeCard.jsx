@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     height: 143,
     backgroundColor: "#e5e3e0",
     marginRight: 20,
-    marginTop: 20,
+    // marginTop: 20,
     // backgroundColor: "red",
     flexDirection: "row",
     justifyContent: "space-between",

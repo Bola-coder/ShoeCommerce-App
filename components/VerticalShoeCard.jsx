@@ -14,7 +14,7 @@ const VerticalShoeCard = () => {
         />
         <View style={styles.imgContainer}>
           <Image
-            source={require("./../assets/images/shoeSeven.png")}
+            source={require("./../assets/images/shoeSix.png")}
             style={styles.image}
           />
         </View>
