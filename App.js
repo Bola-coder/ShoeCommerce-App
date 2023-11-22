@@ -11,11 +11,11 @@ export default function App() {
   SplashScreen.preventAutoHideAsync();
 
   const [fontLoaded, fontError] = useFonts({
-    "Monterrat-Black": require("./assets/fonts/Montserrat-Black.ttf"),
-    "Monterrat-Bold": require("./assets/fonts/Montserrat-Bold.ttf"),
-    "Monterrat-Medium": require("./assets/fonts/Montserrat-Medium.ttf"),
-    "Monterrat-Regular": require("./assets/fonts/Montserrat-Regular.ttf"),
-    "Monterrat-Light": require("./assets/fonts/Montserrat-Light.ttf"),
+    "Montserrat-Black": require("./assets/fonts/Montserrat-Black.ttf"),
+    "Montserrat-Bold": require("./assets/fonts/Montserrat-Bold.ttf"),
+    "Montserrat-Medium": require("./assets/fonts/Montserrat-Medium.ttf"),
+    "Montserrat-Regular": require("./assets/fonts/Montserrat-Regular.ttf"),
+    "Montserrat-Light": require("./assets/fonts/Montserrat-Light.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {

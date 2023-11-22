@@ -19,7 +19,7 @@ const SplashScreen = ({ navigation }) => {
   useEffect(() => {
     startAnimation();
     const navigationTimeout = setTimeout(() => {
-      navigation.navigate("Tab");
+      navigation.navigate("SignupScreen");
     }, 3000);
     return () => clearTimeout(navigationTimeout);
   }, []);
