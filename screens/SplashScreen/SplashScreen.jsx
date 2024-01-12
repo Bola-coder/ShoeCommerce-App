@@ -5,6 +5,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import React, { useEffect } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "./style";
 
 const SplashScreen = ({ navigation }) => {
@@ -16,10 +17,20 @@ const SplashScreen = ({ navigation }) => {
     textPosition.value = withTiming(0, { duration: 1000 });
   };
 
+  const getSupabaseAuthStatus = async () => {
+    const token = await AsyncStorage.getItem("token");
+    // console.log(token);
+    if (token) {
+      navigation.navigate("Tab");
+    } else {
+      navigation.navigate("LoginScreen");
+    }
+  };
+
   useEffect(() => {
     startAnimation();
     const navigationTimeout = setTimeout(() => {
-      navigation.navigate("SignupScreen");
+      getSupabaseAuthStatus();
     }, 3000);
     return () => clearTimeout(navigationTimeout);
   }, []);

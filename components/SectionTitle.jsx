@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
     // color: "#fff",
     fontSize: 16,
     color: "#2F2828",
-    fontFamily: "Monterrat-Black",
+    fontFamily: "Montserrat-Black",
   },
 });

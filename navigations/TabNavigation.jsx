@@ -3,6 +3,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen/HomeScreen";
 import IonIcons from "@expo/vector-icons/Ionicons";
+import ProfileScreen from "../screens/ProfileScreen/ProfileScreen";
 
 const TabNavigation = () => {
   const Tab = createBottomTabNavigator();
@@ -28,7 +29,7 @@ const TabNavigation = () => {
           }
           return <IonIcons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "#5c9cd4",
+        tabBarActiveTintColor: "#2F2828",
         tabBarActiveBackgroundColor: "#FFF",
         tabBarInactiveBackgroundColor: "#FFF",
         tabBarHideOnKeyboard: true,
@@ -63,7 +64,7 @@ const TabNavigation = () => {
 
       <Tab.Screen
         name="Profile"
-        component={HomeScreen}
+        component={ProfileScreen}
         options={{ headerShown: false }}
       />
     </Tab.Navigator>

@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: 10,
     paddingVertical: 20,
-    backgroundColor: "#5c9cd4",
+    // backgroundColor: "#5c9cd4",
     backgroundColor: "#2F2828",
     marginVertical: 10,
     borderRadius: 10,
@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "500",
     color: "#fff",
-    fontFamily: "Monterrat-Bold",
+    fontFamily: "Montserrat-Bold",
   },
 });

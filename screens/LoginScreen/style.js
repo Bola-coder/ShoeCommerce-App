@@ -1,15 +1,15 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  signup: {
+  login: {
     padding: 10,
-    minHeight: "100%",
+    flex: 1,
     backgroundColor: "#fff",
   },
 
   image: {
     width: "100%",
-    height: 100,
+    height: 200,
     resizeMode: "contain",
   },
 

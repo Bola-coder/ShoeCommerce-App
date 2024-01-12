@@ -6,6 +6,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigator from "./navigations/StackNavigation";
+import AuthProvider from "./contexts/AuthContext";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -31,7 +32,9 @@ export default function App() {
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
       <NavigationContainer>
-        <StackNavigator />
+        <AuthProvider>
+          <StackNavigator />
+        </AuthProvider>
       </NavigationContainer>
       <StatusBar style="auto" />
     </View>

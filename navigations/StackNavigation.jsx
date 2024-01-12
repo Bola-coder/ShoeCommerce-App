@@ -5,6 +5,7 @@ import SplashScreen from "../screens/SplashScreen/SplashScreen";
 import TabNavigation from "./TabNavigation";
 import BrandScreen from "../screens/BrandScreen/BrandScreen";
 import SignupScreen from "../screens/SignupScreen/SignupScreen";
+import LoginScreen from "../screens/LoginScreen/LoginScreen";
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -18,6 +19,11 @@ const StackNavigator = () => {
       <Stack.Screen
         name="SignupScreen"
         component={SignupScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="LoginScreen"
+        component={LoginScreen}
         options={{ headerShown: false }}
       />
       <Stack.Screen
