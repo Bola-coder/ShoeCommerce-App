@@ -48,6 +48,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
     gap: 10,
   },
+
+  latestContentProduct: {
+    width: 170,
+  },
 });
 
 export default styles;

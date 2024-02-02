@@ -7,6 +7,7 @@ import BrandScreen from "../screens/BrandScreen/BrandScreen";
 import SignupScreen from "../screens/SignupScreen/SignupScreen";
 import LoginScreen from "../screens/LoginScreen/LoginScreen";
 import BrandCategoryProductsScreen from "../screens/BrandCategoryProductsScreen/BrandCategoryProductsScreen";
+import ProductDetailsScreen from "../screens/ProductDetailsScreen/ProductDetailsScreen";
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -40,6 +41,11 @@ const StackNavigator = () => {
       <Stack.Screen
         name="BrandCategoryProducts"
         component={BrandCategoryProductsScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ProductDetailsScreen"
+        component={ProductDetailsScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

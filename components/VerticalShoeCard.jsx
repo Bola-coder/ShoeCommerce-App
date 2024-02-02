@@ -1,10 +1,22 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import FontAwesomeIcon from "@expo/vector-icons/FontAwesome5";
+import { useNavigation } from "@react-navigation/native";
 
 const VerticalShoeCard = ({ brand, name, image, price }) => {
+  const navigation = useNavigation();
+  const navigateToProductDetails = () => {
+    navigation.navigate("ProductDetailsScreen", {
+      id: 0,
+      title: `${brand} ${name}`,
+    });
+  };
   return (
-    <TouchableOpacity style={styles.cardContainer} activeOpacity={0.7}>
+    <TouchableOpacity
+      style={styles.cardContainer}
+      activeOpacity={0.7}
+      onPress={navigateToProductDetails}
+    >
       <View style={styles.card}>
         <FontAwesomeIcon
           name="heart"

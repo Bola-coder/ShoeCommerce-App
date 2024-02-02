@@ -109,9 +109,30 @@ const HomeScreen = ({ navigation }) => {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.latestContent}
         >
-          <VerticalShoeCard />
-          <VerticalShoeCard />
-          <VerticalShoeCard />
+          <View style={styles.latestContentProduct}>
+            <VerticalShoeCard
+              brand={"Adidas"}
+              name={"Teezy"}
+              price={200}
+              image={require("./../../assets/images/shoeOne.png")}
+            />
+          </View>
+          <View style={styles.latestContentProduct}>
+            <VerticalShoeCard
+              brand={"Adidas"}
+              name={"Teezy"}
+              price={200}
+              image={require("./../../assets/images/shoeTwo.png")}
+            />
+          </View>
+          <View style={styles.latestContentProduct}>
+            <VerticalShoeCard
+              brand={"Adidas"}
+              name={"Teezy"}
+              price={200}
+              image={require("./../../assets/images/shoeThree.png")}
+            />
+          </View>
         </ScrollView>
       </View>
     </ScrollView>
