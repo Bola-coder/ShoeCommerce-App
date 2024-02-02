@@ -9,8 +9,8 @@ import SectionTitle from "../../components/SectionTitle";
 import ShoeCard from "../../components/ShoeCard";
 import VerticalShoeCard from "../../components/VerticalShoeCard";
 
-const BrandScreen = () => {
-  const brandNames = [
+const BrandScreen = ({ navigation }) => {
+  const brandCategories = [
     "Running",
     "Causal",
     "Fashion",
@@ -20,14 +20,15 @@ const BrandScreen = () => {
     "Fashion",
     "Trending",
   ];
-  const [activeBrandIndex, setActiveBrandIndex] = useState(0);
+  const [activeBrandCategoryIndex, setActiveBrandCategoryIndex] = useState(0);
 
-  const handleActiveBrand = (id) => {
-    setActiveBrandIndex(id);
+  const handleActiveBrandCategory = (id) => {
+    setActiveBrandCategoryIndex(id);
   };
+
   return (
     <View>
-      <ScreenHeader title={"Brand"} />
+      <ScreenHeader title={""} />
       <ScrollView
         contentContainerStyle={styles.brand}
         showsVerticalScrollIndicator={false}
@@ -38,13 +39,13 @@ const BrandScreen = () => {
           contentContainerStyle={styles.tabs}
           showsHorizontalScrollIndicator={false}
         >
-          {brandNames.map((brand, index) => (
+          {brandCategories.map((brandCategory, index) => (
             <Tab
               key={index}
-              name={brand}
-              active={index === activeBrandIndex}
+              name={brandCategory}
+              active={index === activeBrandCategoryIndex}
               horizontalScroll={true}
-              onPress={() => handleActiveBrand(index)}
+              onPress={() => handleActiveBrandCategory(index)}
             />
           ))}
         </ScrollView>
@@ -52,7 +53,14 @@ const BrandScreen = () => {
         {/* The content based on the tab selected above */}
 
         <View style={styles.brandContent}>
-          <SectionTitle name={brandNames[activeBrandIndex]} />
+          <SectionTitle
+            name={brandCategories[activeBrandCategoryIndex]}
+            onBtnPress={() =>
+              navigation.navigate("BrandCategoryProducts", {
+                header: brandCategories[activeBrandCategoryIndex],
+              })
+            }
+          />
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <ShoeCard
               brand={"Adidas"}
@@ -81,37 +89,69 @@ const BrandScreen = () => {
           </ScrollView>
         </View>
         {/* Latest Shoes */}
-        <View style={styles.shoe}>
+        <View style={styles.latestProducts}>
           <SectionTitle name={"Latest Shoes"} />
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            contentContainerStyle={styles.shoeContent}
+            contentContainerStyle={styles.latestProductsContent}
           >
-            <VerticalShoeCard
-              brand={"Adidas"}
-              name={"Teezy"}
-              price={200}
-              image={require("./../../assets/images/shoeOne.png")}
-            />
-            <VerticalShoeCard
-              brand={"Adidas"}
-              name={"Teezy"}
-              price={200}
-              image={require("./../../assets/images/shoeTwo.png")}
-            />
-            <VerticalShoeCard
-              brand={"Adidas"}
-              name={"Teezy"}
-              price={200}
-              image={require("./../../assets/images/shoeThree.png")}
-            />
-            <VerticalShoeCard
-              brand={"Adidas"}
-              name={"Teezy"}
-              price={200}
-              image={require("./../../assets/images/shoeFour.png")}
-            />
+            <View style={styles.product}>
+              <VerticalShoeCard
+                brand={"Adidas"}
+                name={"Teezy"}
+                price={200}
+                image={require("./../../assets/images/shoeOne.png")}
+              />
+            </View>
+            <View style={styles.product}>
+              <VerticalShoeCard
+                brand={"Adidas"}
+                name={"Teezy"}
+                price={200}
+                image={require("./../../assets/images/shoeTwo.png")}
+              />
+            </View>
+            <View style={styles.product}>
+              <VerticalShoeCard
+                brand={"Adidas"}
+                name={"Teezy"}
+                price={200}
+                image={require("./../../assets/images/shoeThree.png")}
+              />
+            </View>
+            <View style={styles.product}>
+              <VerticalShoeCard
+                brand={"Adidas"}
+                name={"Teezy"}
+                price={200}
+                image={require("./../../assets/images/shoeFour.png")}
+              />
+            </View>
+            <View style={styles.product}>
+              <VerticalShoeCard
+                brand={"Adidas"}
+                name={"Teezy"}
+                price={200}
+                image={require("./../../assets/images/shoeFive.png")}
+              />
+            </View>
+            <View style={styles.product}>
+              <VerticalShoeCard
+                brand={"Adidas"}
+                name={"Teezy"}
+                price={200}
+                image={require("./../../assets/images/shoeOne.png")}
+              />
+            </View>
+            <View style={styles.product}>
+              <VerticalShoeCard
+                brand={"Adidas"}
+                name={"Teezy"}
+                price={200}
+                image={require("./../../assets/images/shoeTwo.png")}
+              />
+            </View>
           </ScrollView>
         </View>
       </ScrollView>

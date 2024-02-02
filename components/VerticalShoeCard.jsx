@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import FontAwesomeIcon from "@expo/vector-icons/FontAwesome5";
 
-const VerticalShoeCard = () => {
+const VerticalShoeCard = ({ brand, name, image, price }) => {
   return (
     <TouchableOpacity style={styles.cardContainer} activeOpacity={0.7}>
       <View style={styles.card}>
@@ -13,15 +13,12 @@ const VerticalShoeCard = () => {
           style={styles.favIcon}
         />
         <View style={styles.imgContainer}>
-          <Image
-            source={require("./../assets/images/shoeSix.png")}
-            style={styles.image}
-          />
+          <Image source={image} style={styles.image} />
         </View>
       </View>
       <View style={styles.text}>
-        <Text style={styles.name}>Nike Air Force I</Text>
-        <Text style={styles.price}>$ 270.00</Text>
+        <Text style={styles.name}>{`${brand} ${name}`}</Text>
+        <Text style={styles.price}>$ {price}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -35,9 +32,9 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    width: 150,
+    width: "100%",
     height: 170,
-    backgroundColor: "#e5e3e0",
+    backgroundColor: "#CFCFCF",
     borderRadius: 8,
   },
 

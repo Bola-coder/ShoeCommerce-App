@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
 
   activeStyles: {
-    backgroundColor: "#333",
+    backgroundColor: "#2F2828",
   },
 
   activeText: {

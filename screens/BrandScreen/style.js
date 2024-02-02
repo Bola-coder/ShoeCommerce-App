@@ -17,14 +17,18 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
 
-  shoe: {
+  latestProducts: {
     marginTop: 10,
     paddingVertical: 10,
     marginBottom: 20,
   },
 
-  shoeContent: {
+  latestProductsContent: {
     gap: 15,
+  },
+
+  product: {
+    width: 170,
   },
 });
 
