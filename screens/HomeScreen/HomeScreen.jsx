@@ -32,7 +32,7 @@ const HomeScreen = ({ navigation }) => {
       brand: "Adidas",
       name: "Yung-I",
       price: 128.99,
-      image: require("./../../assets/images/shoeFive.png"),
+      image: require("./../../assets/images/NikeShoe.png"),
     },
     {
       id: 2,

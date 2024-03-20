@@ -5,8 +5,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#fff",
-    // height: "100%",
   },
 
   imageContainer: {
@@ -14,29 +12,34 @@ const styles = StyleSheet.create({
   },
 
   textContainer: {
-    // backgroundColor: "pink",
+    marginTop: 0,
   },
 
   text: {
     fontSize: 36,
     fontWeight: "700",
-    color: "#804004",
+    color: "#000",
+    textAlign: "center",
+    marginBottom: 15,
   },
 
+  lightText: {
+    fontWeight: "400",
+    textAlign: "center",
+  },
+
+  subText: {
+    fontSize: 24,
+    marginTop: 10,
+    fontWeight: "500",
+    color: "#000",
+    textAlign: "center",
+  },
   btn: {
     marginTop: "10%",
-    paddingHorizontal: 20,
-    paddingVertical: 15,
-    backgroundColor: "#804004",
-    borderRadius: 6,
-    width: "80%",
-  },
-
-  btnText: {
-    fontSize: 24,
-    fontWeight: "500",
-    color: "#fff",
-    textAlign: "center",
+    // width: "70%",
+    // alignSelf: "center",
+    paddingHorizontal: "17%",
   },
 });
 

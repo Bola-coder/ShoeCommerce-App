@@ -1,12 +1,17 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import femaleImage from "./../assets/images/femaleImage.png";
+import { LinearGradient } from "expo-linear-gradient";
 
 const CategoryCard = ({ name, image }) => {
   return (
-    <View style={styles.category}>
+    <LinearGradient
+      colors={["#ECCD5F", "#C5FF7B"]}
+      locations={[0.2, 0.9]}
+      style={styles.category}
+    >
       <Text style={styles.categoryText}>{name}</Text>
       <Image source={image} />
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -30,7 +35,7 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 18,
     fontWeight: "500",
-    color: "#fff",
+    color: "#000",
     fontFamily: "Montserrat-Bold",
   },
 });

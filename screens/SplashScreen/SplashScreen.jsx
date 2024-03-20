@@ -6,6 +6,8 @@ import Animated, {
 } from "react-native-reanimated";
 import React, { useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { LinearGradient } from "expo-linear-gradient";
+import AppButton from "../../components/AppButton";
 import styles from "./style";
 
 const SplashScreen = ({ navigation }) => {
@@ -19,6 +21,7 @@ const SplashScreen = ({ navigation }) => {
 
   const getAuthStatus = async () => {
     const token = await AsyncStorage.getItem("token");
+    console.log(token);
     // console.log(token);
     if (token) {
       navigation.navigate("Tab");
@@ -29,10 +32,6 @@ const SplashScreen = ({ navigation }) => {
 
   useEffect(() => {
     startAnimation();
-    const navigationTimeout = setTimeout(() => {
-      getAuthStatus();
-    }, 3000);
-    return () => clearTimeout(navigationTimeout);
   }, []);
 
   // Animation styles
@@ -49,21 +48,34 @@ const SplashScreen = ({ navigation }) => {
   });
 
   return (
-    <View style={styles.spalsh}>
+    <LinearGradient
+      colors={["#ECCD5F", "#C5FF7B"]}
+      locations={[0.6, 0.8]}
+      style={styles.spalsh}
+    >
       <Animated.View style={[styles.imageContainer, imageAnimatedStyle]}>
         <Image
-          source={require("./../../assets/images/shoeFour.png")}
-          width={60}
-          height={60}
+          source={require("./../../assets/images/splashScreenImage.png")}
         />
       </Animated.View>
       <Animated.View style={[styles.textContainer, textAnimationStyle]}>
-        <Text style={styles.text}>ShoeCom</Text>
+        <Text style={styles.text}>
+          Sustainable <Text style={styles.lightText}>&</Text> Fashionable
+          <Text style={styles.lightText}> footwear</Text>
+        </Text>
+
+        <Text style={styles.subText}>at your fingertips</Text>
+        <View style={styles.btn}>
+          <AppButton
+            text={"Get Started"}
+            bg={"#2F2828"}
+            color={"#FFF"}
+            rounded={true}
+            handlePress={getAuthStatus}
+          />
+        </View>
       </Animated.View>
-      {/* <TouchableOpacity style={styles.btn} activeOpacity={0.7}>
-        <Text style={styles.btnText}>Continue</Text>
-      </TouchableOpacity> */}
-    </View>
+    </LinearGradient>
   );
 };
 

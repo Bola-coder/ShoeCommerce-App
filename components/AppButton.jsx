@@ -1,11 +1,15 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import React from "react";
 
-const AppButton = ({ text, bg, color, handlePress, isDisabled }) => {
+const AppButton = ({ text, bg, color, handlePress, isDisabled, rounded }) => {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
-      style={[styles.button, { backgroundColor: bg }]}
+      style={[
+        styles.button,
+        { backgroundColor: bg },
+        rounded && { borderRadius: 50 },
+      ]}
       onPress={handlePress}
       disabled={isDisabled}
     >

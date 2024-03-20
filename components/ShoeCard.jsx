@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    flexBasis: "50%",
+    flexBasis: "40%",
   },
 
   brand: {
@@ -64,10 +64,22 @@ const styles = StyleSheet.create({
   imgContainer: {
     flexBasis: "50%",
     height: "100%",
+    borderRadius: 8, // Make sure it's the same as shoeCard's borderRadius
+    // elevation: 4, // This adds a shadow for Android
+    // // For iOS, you will need the following:
+    // shadowColor: "#000",
+    // shadowOffset: { width: 0, height: 2 },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
   },
 
   shoeCardImage: {
-    width: "100%",
-    height: "100%",
+    width: "105%", // Slightly more than 100% for the pop effect
+    // height: "105%", // Slightly more than 100% for the pop effect
+    // position: "absolute", // Position absolutely to overlap the container
+    // bottom: -5, // Adjust as necessary to get the desired pop effect
+    // right: -5, // Adjust as necessary to get the desired pop effect
+    zIndex: 100,
+    objectFit: "cover",
   },
 });
