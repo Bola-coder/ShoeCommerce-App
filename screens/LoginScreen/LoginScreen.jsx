@@ -6,20 +6,22 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import React, { useState } from "react";
-import { useAuth } from "../../contexts/AuthContext";
+// import { useAuth } from "../../contexts/AuthContext";
 import styles from "./style";
 import FontAwesome from "@expo/vector-icons/FontAwesome5";
 import AppButton from "../../components/AppButton";
 import ErrorModal from "../../components/ErrorModal";
 
 const LoginScreen = ({ navigation }) => {
-  const { login, authLoading, error } = useAuth();
+  // const { login, authLoading, error } = useAuth();
   const [hidePassword, setHidePassword] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    login(email, password);
+    console.log("heyyy");
+    // login(email, password);
+    navigation.navigate("Tab");
   };
 
   return (
@@ -71,7 +73,7 @@ const LoginScreen = ({ navigation }) => {
           bg={"#2F2828"}
           color={"#FFF"}
           handlePress={handleLogin}
-          isDisabled={authLoading}
+          // isDisabled={authLoading}
         />
       </View>
       <View style={styles.redirect}>
@@ -85,7 +87,7 @@ const LoginScreen = ({ navigation }) => {
           </Text>
         </Text>
       </View>
-      <ErrorModal visible={!!error} message={error} />
+      {/* <ErrorModal visible={!!error} message={error} /> */}
     </KeyboardAvoidingView>
   );
 };

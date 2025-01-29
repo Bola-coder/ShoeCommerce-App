@@ -7,13 +7,13 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useState } from "react";
-import { useAuth } from "../../contexts/AuthContext";
+// import { useAuth } from "../../contexts/AuthContext";
 import styles from "./style";
 import FontAwesome from "@expo/vector-icons/FontAwesome5";
 import AppButton from "../../components/AppButton";
 
 const SignupScreen = ({ navigation }) => {
-  const { signup, authLoading } = useAuth();
+  // const { signup, authLoading } = useAuth();
   const [hidePassword, setHidePassword] = useState(true);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -23,7 +23,7 @@ const SignupScreen = ({ navigation }) => {
 
   const handleSignup = () => {
     console.log("Heyyy!!!");
-    signup(email, password, firstName, lastName, userName);
+    // signup(email, password, firstName, lastName, userName);
   };
 
   return (
@@ -103,7 +103,7 @@ const SignupScreen = ({ navigation }) => {
             bg={"#2F2828"}
             color={"#FFF"}
             handlePress={handleSignup}
-            isDisabled={authLoading}
+            // isDisabled={authLoading}
           />
         </View>
         <View style={styles.redirect}>

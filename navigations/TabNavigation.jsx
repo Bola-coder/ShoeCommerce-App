@@ -15,7 +15,7 @@ const TabNavigation = () => {
           let iconName;
           let routeName = route.name;
           if (routeName == "Home") {
-            iconName = focused ? "ios-home" : "ios-home-outline";
+            iconName = focused ? "home" : "home-outline";
             size = focused ? 26 : 24;
           } else if (routeName === "Search") {
             iconName = focused ? "search" : "search-outline";

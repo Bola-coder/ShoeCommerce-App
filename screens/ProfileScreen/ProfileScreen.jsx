@@ -2,13 +2,13 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import ScreenHeader from "../../components/ScreenHeader";
 import styles from "./style";
-import { useAuth } from "../../contexts/AuthContext";
+// import { useAuth } from "../../contexts/AuthContext";
 const ProfileScreen = ({ navigation }) => {
-  const { logout, token } = useAuth();
+  // const { logout, token } = useAuth();
   //   console.log(session);
 
   const handleLogout = () => {
-    logout();
+    // logout();
     navigation.navigate("LoginScreen");
   };
   return (
@@ -18,7 +18,7 @@ const ProfileScreen = ({ navigation }) => {
         <TouchableOpacity style={styles.btn} onPress={handleLogout}>
           <Text style={styles.btnText}>Logout</Text>
         </TouchableOpacity>
-        <Text> Your token is: {token}</Text>
+        {/* <Text> Your token is: {token}</Text> */}
       </View>
     </View>
   );

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, Platform } from "react-native";
 import { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import Constants from "expo-constants";
@@ -6,7 +6,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigator from "./navigations/StackNavigation";
-import AuthProvider from "./contexts/AuthContext";
+// import AuthProvider from "./contexts/AuthContext";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -32,9 +32,9 @@ export default function App() {
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
       <NavigationContainer>
-        <AuthProvider>
-          <StackNavigator />
-        </AuthProvider>
+        {/* <AuthProvider> */}
+        <StackNavigator />
+        {/* </AuthProvider> */}
       </NavigationContainer>
       <StatusBar style="auto" />
     </View>
